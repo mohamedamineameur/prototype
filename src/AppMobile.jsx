@@ -5,6 +5,10 @@ import Dashboard from "./pages/DashboardMobile";
 import RapportsESG from "./pages/RapportsESGMobile";
 import Batiments from "./pages/BatimentsMobile";
 import { Menu } from "lucide-react";
+import Vehicules from "./pages/Voitures";
+import DonneesSociales from './pages/Social'
+import Gouvernance from './pages/Gouvernance';
+
 import.meta.env.BASE_URL
 const base = import.meta.env.BASE_URL;
 
@@ -50,6 +54,10 @@ function AppMobile() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/rapports" element={<RapportsESG />} />
             <Route path="/batiments" element={<Batiments />} />
+            <Route path="/vehicules" element={<Vehicules />} />
+            <Route path="/donnees-sociales" element={<DonneesSociales />} />
+            <Route path="/gouvernances" element={<Gouvernance />} />
+            {/* Ajoute d'autres routes ici */}
           </Routes>
         </div>
       </div>
