@@ -22,32 +22,34 @@ export default function Accueil() {
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-white via-[#F2FAFF] to-[#EAF4FC] flex flex-col items-center justify-center p-6 space-y-10 font-archivo">
-      {/* Logo */}
-      <img src={`${BASE}logo-blue.png`} alt="Logo SF Factor" className="w-36 sm:w-44 mb-2 drop-shadow-md" />
+    <main className="min-h-screen bg-gradient-to-br from-white via-[#F2FAFF] to-[#EAF4FC] overflow-y-auto font-archivo">
+      <div className="max-w-6xl mx-auto px-4 py-10 flex flex-col items-center">
+        {/* Logo */}
+        <img src={`${BASE}logo-blue.png`} alt="Logo SF Factor" className="w-36 sm:w-44 mb-4 drop-shadow-md" />
 
-      {/* Welcome */}
-      <div className="text-center max-w-2xl">
-        <h1 className="text-3xl sm:text-5xl font-extrabold text-[#1D4E89] tracking-tight leading-tight mb-4">
-          Bienvenue sur votre <span className="text-[#00B2CA]">portail ESG</span>
-        </h1>
-        <p className="text-gray-600 text-sm sm:text-base">
-          Pilotez vos données environnementales, sociales et de gouvernance à travers une interface fluide, riche, et entièrement responsive.
-        </p>
+        {/* Welcome */}
+        <div className="text-center max-w-2xl mb-10">
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-[#1D4E89] tracking-tight leading-tight mb-4">
+            Bienvenue sur votre <span className="text-[#00B2CA]">portail ESG</span>
+          </h1>
+          <p className="text-gray-600 text-sm sm:text-base">
+            Pilotez vos données environnementales, sociales et de gouvernance à travers une interface fluide, riche, et entièrement responsive.
+          </p>
+        </div>
+
+        {/* Grid of links */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full">
+          <AccueilCard icon={<Home />} label="Accueil" to="/" />
+          {links.map((item, index) => (
+            <AccueilCard key={index} icon={item.icon} label={item.label} to={item.to} />
+          ))}
+        </div>
+
+        {/* Footer */}
+        <footer className="text-sm text-gray-400 mt-12 text-center">
+          © {new Date().getFullYear()} SF Factor · Tous droits réservés
+        </footer>
       </div>
-
-      {/* Grid of links */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-5xl">
-        <AccueilCard icon={<Home />} label="Accueil" to="/" />
-        {links.map((item, index) => (
-          <AccueilCard key={index} icon={item.icon} label={item.label} to={item.to} />
-        ))}
-      </div>
-
-      {/* Footer */}
-      <footer className="text-sm text-gray-400 mt-12">
-        © {new Date().getFullYear()} SF Factor · Tous droits réservés
-      </footer>
     </main>
   );
 }
