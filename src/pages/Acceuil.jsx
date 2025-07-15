@@ -13,36 +13,39 @@ const BASE = import.meta.env.BASE_URL;
 
 export default function Accueil() {
   const links = [
-    { icon: <LayoutDashboard size={20} />, label: "Tableaux de bord", to: "/dashboard" },
-    { icon: <FileText size={20} />, label: "Rapports ESG", to: "/rapports" },
-    { icon: <Building size={20} />, label: "Bâtiments", to: "/batiments" },
-    { icon: <Car size={20} />, label: "Véhicules", to: "/vehicules" },
-    { icon: <Users size={20} />, label: "Données sociales", to: "/donnees-sociales" },
-    { icon: <Landmark size={20} />, label: "Gouvernance", to: "/gouvernances" },
+    { icon: <LayoutDashboard size={26} />, label: "Tableaux de bord", to: "/dashboard" },
+    { icon: <FileText size={26} />, label: "Rapports ESG", to: "/rapports" },
+    { icon: <Building size={26} />, label: "Bâtiments", to: "/batiments" },
+    { icon: <Car size={26} />, label: "Véhicules", to: "/vehicules" },
+    { icon: <Users size={26} />, label: "Données sociales", to: "/donnees-sociales" },
+    { icon: <Landmark size={26} />, label: "Gouvernance", to: "/gouvernances" },
   ];
 
   return (
-    <main className="min-h-screen bg-white font-archivo flex flex-col items-center justify-center p-6 space-y-10 text-center">
-      <img src={`${BASE}logo-blue.png`} alt="Logo" className="w-40 mb-4" />
+    <main className="min-h-screen bg-gradient-to-br from-white via-[#F2FAFF] to-[#EAF4FC] flex flex-col items-center justify-center p-6 space-y-10 font-archivo">
+      {/* Logo */}
+      <img src={`${BASE}logo-blue.png`} alt="Logo SF Factor" className="w-36 sm:w-44 mb-2 drop-shadow-md" />
 
-      <h1 className="text-3xl sm:text-4xl font-bold text-[#1D4E89]">
-        Bienvenue sur votre plateforme ESG
-      </h1>
+      {/* Welcome */}
+      <div className="text-center max-w-2xl">
+        <h1 className="text-3xl sm:text-5xl font-extrabold text-[#1D4E89] tracking-tight leading-tight mb-4">
+          Bienvenue sur votre <span className="text-[#00B2CA]">portail ESG</span>
+        </h1>
+        <p className="text-gray-600 text-sm sm:text-base">
+          Pilotez vos données environnementales, sociales et de gouvernance à travers une interface fluide, riche, et entièrement responsive.
+        </p>
+      </div>
 
-      <p className="text-gray-600 max-w-xl">
-        Visualisez, saisissez et pilotez vos données <span className="font-medium text-[#00B2CA]">environnementales</span>,
-        <span className="font-medium text-[#00B2CA]"> sociales</span> et
-        <span className="font-medium text-[#00B2CA]"> de gouvernance</span>.
-      </p>
-
-      <div className="grid w-full max-w-3xl grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <AccueilCard icon={<Home size={20} />} label="Accueil" to="/" />
+      {/* Grid of links */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-5xl">
+        <AccueilCard icon={<Home />} label="Accueil" to="/" />
         {links.map((item, index) => (
           <AccueilCard key={index} icon={item.icon} label={item.label} to={item.to} />
         ))}
       </div>
 
-      <footer className="mt-10 text-sm text-gray-400">
+      {/* Footer */}
+      <footer className="text-sm text-gray-400 mt-12">
         © {new Date().getFullYear()} SF Factor · Tous droits réservés
       </footer>
     </main>
@@ -53,10 +56,12 @@ function AccueilCard({ icon, label, to }) {
   return (
     <Link
       to={to}
-      className="flex items-center justify-center gap-2 px-4 py-3 bg-[#F4F7FA] rounded-xl shadow border border-gray-200 hover:shadow-md text-[#1D4E89] font-medium transition"
+      className="group flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200"
     >
-      {icon}
-      <span>{label}</span>
+      <div className="flex items-center justify-center w-14 h-14 rounded-full bg-[#00B2CA]/10 text-[#00B2CA] mb-3 border border-[#00B2CA]/20 group-hover:bg-[#00B2CA]/20">
+        {icon}
+      </div>
+      <span className="text-[#1D4E89] font-medium text-sm sm:text-base text-center">{label}</span>
     </Link>
   );
 }
