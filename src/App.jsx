@@ -6,6 +6,7 @@ import Batiments from "./pages/Batiments";
 import Vehicules from "./pages/Voitures";
 import DonneesSociales from './pages/Social'
 import Gouvernance from './pages/Gouvernance';
+import Accueil from './pages/Acceuil';
 
 const base = import.meta.env.BASE_URL; // 🔥 Import de la base depuis Vite
 
@@ -16,7 +17,8 @@ function App() {
         <Sidebar />
         <div className="flex-1 overflow-y-auto bg-white">
           <Routes>
-            <Route path="/" element={<Dashboard />} />
+            <Route path="/" element={<Accueil />} />
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/rapports" element={<RapportsESG />} />
             <Route path="/batiments" element={<Batiments />} />
             <Route path="/vehicules" element={<Vehicules />} />

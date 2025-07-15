@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { Home, FileText, Building, Car, Users, Landmark } from "lucide-react";
+import { Home, FileText, Building, Car, Users, Landmark, LayoutDashboard } from "lucide-react";
 const BASE = import.meta.env.BASE_URL;
 const Sidebar = () => {
   return (
@@ -7,7 +7,8 @@ const Sidebar = () => {
       <div>
         <img src={`${BASE}logo-white.png`} alt="Logo" className="w-32 mx-auto mt-4" />
         <nav className="flex flex-col mt-4 gap-2 px-4">
-          <SidebarItem icon={<Home size={18} />} label="Tableaux de bord" to="/" />
+          <SidebarItem icon={<Home size={18} />} label="Accueil" to="/" />
+          <SidebarItem icon={<LayoutDashboard size={18} />} label="Tableaux de bord" to="/dashboard" />
           <SidebarItem icon={<FileText size={18} />} label="Rapports ESG" to="/rapports" />
           <SidebarItem icon={<Building size={18} />} label="Bâtiments" to="/batiments" />
           <SidebarItem icon={<Car size={18} />} label="Véhicules" to="/vehicules" />
