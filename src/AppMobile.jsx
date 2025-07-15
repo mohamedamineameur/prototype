@@ -6,7 +6,7 @@ import RapportsESG from "./pages/RapportsESGMobile";
 import Batiments from "./pages/BatimentsMobile";
 import { Menu } from "lucide-react";
 import.meta.env.BASE_URL
-
+const base = import.meta.env.BASE_URL;
 
 function AppMobile() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,7 +17,7 @@ function AppMobile() {
   }, [menuOpen]);
 
   return (
-    <Router>
+    <Router basename={base}>
       <div className="flex h-screen font-archivo overflow-hidden relative">
         {/* Sidebar mobile drawer */}
         <div
