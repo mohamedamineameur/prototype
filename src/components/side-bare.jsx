@@ -1,18 +1,25 @@
 import { NavLink } from "react-router-dom";
 import { Home, FileText, Building, Car, Users, Landmark } from "lucide-react";
 
+const base = import.meta.env.BASE_URL; // <-- Base dynamique
+
 const Sidebar = () => {
   return (
     <div className="bg-[#1D4E89] text-white w-64 h-screen flex flex-col justify-between font-['Archivo']">
       <div>
-        <img src="/logo-white.png" alt="Logo" className="w-32 mx-auto mt-4" />
+        <img
+          src={`${base}logo-white.png`} // <-- IMAGE dynamique
+          alt="Logo"
+          className="w-32 mx-auto mt-4"
+        />
+
         <nav className="flex flex-col mt-4 gap-2 px-4">
-          <SidebarItem icon={<Home size={18} />} label="Tableaux de bord" to="/" />
-          <SidebarItem icon={<FileText size={18} />} label="Rapports ESG" to="/rapports" />
-          <SidebarItem icon={<Building size={18} />} label="Bâtiments" to="/batiments" />
-          <SidebarItem icon={<Car size={18} />} label="Véhicules" to="/vehicules" />
-          <SidebarItem icon={<Users size={18} />} label="Données sociales" to="/donnees-sociales" />
-          <SidebarItem icon={<Landmark size={18} />} label="Gouvernance" to="/gouvernances" />
+          <SidebarItem icon={<Home size={18} />} label="Tableaux de bord" to={`${base}`} />
+          <SidebarItem icon={<FileText size={18} />} label="Rapports ESG" to={`${base}rapports`} />
+          <SidebarItem icon={<Building size={18} />} label="Bâtiments" to={`${base}batiments`} />
+          <SidebarItem icon={<Car size={18} />} label="Véhicules" to={`${base}vehicules`} />
+          <SidebarItem icon={<Users size={18} />} label="Données sociales" to={`${base}donnees-sociales`} />
+          <SidebarItem icon={<Landmark size={18} />} label="Gouvernance" to={`${base}gouvernances`} />
         </nav>
       </div>
 

@@ -5,6 +5,8 @@ import Dashboard from "./pages/DashboardMobile";
 import RapportsESG from "./pages/RapportsESGMobile";
 import Batiments from "./pages/BatimentsMobile";
 import { Menu } from "lucide-react";
+import.meta.env.BASE_URL
+
 
 function AppMobile() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -41,7 +43,7 @@ function AppMobile() {
             <button onClick={() => setMenuOpen(true)}>
               <Menu size={24} className="text-[#1D4E89]" />
             </button>
-            <img src='/logo-blue.png' alt="Logo" className="w-32" />
+            <img src={`${import.meta.env.BASE_URL}logo-blue.png`} alt="Logo" className="w-32" />
           </div>
 
           <Routes>
