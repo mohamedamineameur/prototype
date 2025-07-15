@@ -1,31 +1,23 @@
 import { NavLink } from "react-router-dom";
-import { Home, FileText, Building, Car, Users, Landmark, X } from "lucide-react";
+import { Home, FileText, Building, Car, Users, Landmark } from "lucide-react";
 
-const base = import.meta.env.BASE_URL; // 🌍 Base dynamique
+const BASE = import.meta.env.BASE_URL; // base dynamique
 
-const Sidebar = ({ onClose }) => {
+const Sidebar = () => {
   return (
-    <div className="h-full w-64 bg-[#1D4E89] text-white flex flex-col justify-between font-['Archivo'] shadow-lg">
-      {/* Header avec bouton de fermeture en mobile */}
+    <div className="bg-[#1D4E89] text-white w-64 h-screen flex flex-col justify-between font-['Archivo']">
       <div>
-        <div className="flex items-center justify-between p-4 md:justify-center">
-          <img src={`${base}logo-white.png`} alt="Logo" className="w-28" />
-          <button onClick={onClose} className="md:hidden">
-            <X size={20} />
-          </button>
-        </div>
-
-        <nav className="flex flex-col mt-4 gap-1 px-4">
-          <SidebarItem icon={<Home size={18} />} label="Tableaux de bord" to={`${base}`} />
-          <SidebarItem icon={<FileText size={18} />} label="Rapports ESG" to={`${base}rapports`} />
-          <SidebarItem icon={<Building size={18} />} label="Bâtiments" to={`${base}batiments`} />
-          <SidebarItem icon={<Car size={18} />} label="Véhicules" to={`${base}vehicules`} />
-          <SidebarItem icon={<Users size={18} />} label="Données sociales" to={`${base}donnees-sociales`} />
-          <SidebarItem icon={<Landmark size={18} />} label="Gouvernance" to={`${base}gouvernances`} />
+        <img src={`${BASE}logo-white.png`} alt="Logo" className="w-32 mx-auto mt-4" />
+        <nav className="flex flex-col mt-4 gap-2 px-4">
+          <SidebarItem icon={<Home size={18} />} label="Tableaux de bord" to={`${BASE}`} />
+          <SidebarItem icon={<FileText size={18} />} label="Rapports ESG" to={`${BASE}rapports`} />
+          <SidebarItem icon={<Building size={18} />} label="Bâtiments" to={`${BASE}batiments`} />
+          <SidebarItem icon={<Car size={18} />} label="Véhicules" to={`${BASE}vehicules`} />
+          <SidebarItem icon={<Users size={18} />} label="Données sociales" to={`${BASE}donnees-sociales`} />
+          <SidebarItem icon={<Landmark size={18} />} label="Gouvernance" to={`${BASE}gouvernances`} />
         </nav>
       </div>
 
-      {/* Bas de la sidebar */}
       <div className="p-4 border-t border-white/20">
         <div className="text-sm mb-2">Assistant de saisie</div>
         <div className="w-full bg-white/20 h-2 rounded-full overflow-hidden mb-1">
@@ -38,22 +30,18 @@ const Sidebar = ({ onClose }) => {
   );
 };
 
-const SidebarItem = ({ icon, label, to }) => {
-  return (
-    <NavLink
-      to={to}
-      className={({ isActive }) =>
-        `flex items-center gap-2 px-3 py-2 rounded-md transition-colors ${
-          isActive
-            ? "bg-white text-[#1D4E89] font-semibold"
-            : "hover:bg-white/10 text-white"
-        }`
-      }
-    >
-      {icon}
-      <span>{label}</span>
-    </NavLink>
-  );
-};
+const SidebarItem = ({ icon, label, to }) => (
+  <NavLink
+    to={to}
+    className={({ isActive }) =>
+      `flex items-center gap-2 px-3 py-2 rounded-md transition-colors ${
+        isActive ? "bg-white text-[#1D4E89] font-semibold" : "hover:bg-white/10 text-white"
+      }`
+    }
+  >
+    {icon}
+    <span>{label}</span>
+  </NavLink>
+);
 
 export default Sidebar;
