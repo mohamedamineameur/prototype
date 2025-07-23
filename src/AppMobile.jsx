@@ -31,7 +31,8 @@ function LayoutMobile() {
     "/register",
     "/reset-password",
     "/new-password",
-    "/otp"
+    "/otp",
+    "/landing"
   ];
 
   const hideSidebar = noSidebarRoutes.includes(location.pathname);
