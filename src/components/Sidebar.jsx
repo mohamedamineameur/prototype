@@ -8,8 +8,8 @@ const Sidebar = () => {
   const [envOpen, setEnvOpen] = useState(false);
 
   return (
-    <div className="bg-[#1D4E89] text-white w-64 h-screen flex flex-col justify-between font-['Archivo']">
-      <div>
+<div className="bg-[#1D4E89] text-white w-64 h-screen overflow-y-auto font-['Archivo']">
+<div>
         <img src={`${BASE}logo-white.png`} alt="Logo" className="w-32 mx-auto mt-4" />
         <nav className="flex flex-col mt-4 gap-2 px-4">
           <SidebarItem icon={<Home size={18} />} label="Accueil" to="/" />

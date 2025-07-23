@@ -7,7 +7,11 @@ export default function LandingPage() {
     
   return (
     <div className="min-h-screen flex flex-col justify-center items-center px-4 font-['Archivo'] text-white text-center">
-      <img src={`${BASE}logo-color.png`} alt="Logo" style={{ maxWidth: '480px', marginBottom: 40 }} />
+<img
+  src={`${BASE}logo-color.png`}
+  alt="Logo"
+  className="w-full max-w-xs sm:max-w-sm md:max-w-md mb-10"
+/>
 
       <p className="text-[#7DCFB6]  max-w-md mb-10 text-lg">
         Faites de la durabilité votre plus grand atout

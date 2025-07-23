@@ -19,6 +19,8 @@ import Documentation from "./pages/Documentation";
 import AideSupport from "./pages/AideSupport";
 import Parametres from "./pages/Parametres";
 import Environnement from "./pages/Environnement";
+import LandingPage from "./pages/LandingPage";
+
 
 const base = import.meta.env.BASE_URL;
 
@@ -94,6 +96,7 @@ function LayoutMobile() {
           <Route path="/aide" element={<AideSupport />} />
           <Route path="/settings" element={<Parametres />} />
           <Route path="/environnement" element={<Environnement />} />
+          <Route path="/landing" element={<LandingPage />} />
         </Routes>
       </div>
     </div>
