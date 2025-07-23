@@ -39,7 +39,7 @@ const Sidebar = () => {
       </div>
 
       {/* Section bas de sidebar */}
-      <div className="px-4 pb-4 border-t border-white/20">
+      <div className="px-4 pb-12 border-t border-white/20">
         <div className="flex flex-col gap-2 text-sm mt-4">
           <SidebarItem icon={<HelpCircle size={16} />} label="Aide" to="/aide" small />
           <SidebarItem icon={<Settings size={16} />} label="Paramètres" to="/settings" small />
@@ -47,14 +47,20 @@ const Sidebar = () => {
         </div>
 
         {/* Progress bar & utilisateur */}
-        <div className="mt-6 text-sm">
+        <div className="mt-6 text-sm mb-3" >
           <div className="mb-2">Assistant de saisie</div>
           <div className="w-full bg-white/20 h-2 rounded-full overflow-hidden mb-1">
             <div className="bg-[#00B2CA] h-full w-[20%]" />
           </div>
           <span className="text-xs text-white/80">20 %</span>
           <div className="mt-4">Sébastien Dubois</div>
-          <SidebarItem icon={<LogOut size={16}/>} label="Déconnexion" to="/landing" small />
+          <button
+  onClick={() => window.location.href = `${BASE}landing`}
+  className="flex items-center gap-2 px-3 py-2 rounded-md text-white hover:bg-white/10 text-sm pl-2 w-full transition-colors"
+>
+  <LogOut size={16} />
+  <span>Déconnexion</span>
+</button>
           </div>
       </div>
     </div>
