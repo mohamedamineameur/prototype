@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { Home, FileText, Building, Car, Users, Landmark, LayoutDashboard, ChevronDown, ChevronUp, HelpCircle, Settings, BookOpen } from "lucide-react";
+import { Home, FileText, Building, Car, Users, Landmark, LayoutDashboard, ChevronDown, ChevronUp, HelpCircle, Settings, BookOpen, LogOut } from "lucide-react";
 import { useState } from "react";
 
 const BASE = import.meta.env.BASE_URL;
@@ -54,7 +54,8 @@ const Sidebar = () => {
           </div>
           <span className="text-xs text-white/80">20 %</span>
           <div className="mt-4">Sébastien Dubois</div>
-        </div>
+          <SidebarItem icon={<LogOut size={16}/>} label="Déconnexion" to="/landing" small />
+          </div>
       </div>
     </div>
   );

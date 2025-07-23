@@ -23,8 +23,20 @@ export default function RapportsESG() {
   
     return (
       <main className="flex-1 p-8 bg-white font-archivo">
+        <div className="flex flex-col items-center">
         <h1 className="text-3xl font-bold text-[#1D4E89] mb-2">Rapports ESG</h1>
         <p className="text-gray-600 mb-6">Consultez l’historique de vos rapports ESG, classés par date et domaine.</p>
+        </div>
+
+        <div className="flex flex-col items-end mb-3" >
+        <button
+              onClick={() => setShowForm(true)}
+              className="bg-[#00B2CA] hover:bg-[#1D4E89] text-white px-4 py-2 rounded-md text-sm"
+            >
+              + Créér un rapport
+            </button>
+        </div>
+
   
         <div className="bg-white border rounded-xl overflow-hidden shadow-sm">
           <table className="w-full table-auto">

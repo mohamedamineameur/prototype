@@ -17,6 +17,7 @@ import Documentation from "./pages/Documentation";
 import AideSupport from "./pages/AideSupport";
 import Parametres from "./pages/Parametres";
 import Environnement from "./pages/Environnement";
+import LandingPage from "./pages/LandingPage";
 
 const base = import.meta.env.BASE_URL;
 
@@ -28,6 +29,7 @@ function Layout() {
     "/reset-password",
     "/new-password",
     "/otp",
+    "/landing"
   ];
 
   const hideSidebar = noSidebarRoutes.includes(location.pathname);
@@ -54,6 +56,7 @@ function Layout() {
           <Route path="/aide" element={<AideSupport />} />
           <Route path="/settings" element={<Parametres />} />
           <Route path="/environnement" element={<Environnement />} />
+          <Route path="/landing" element={<LandingPage />} />
         </Routes>
       </div>
     </div>
