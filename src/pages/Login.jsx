@@ -15,8 +15,8 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#1D4E89] font-['Archivo'] overflow-y-auto  px-4">
-      <div className="bg-white rounded-2xl shadow-lg w-full max-w-4xl flex flex-col md:flex-row overflow-hidden">
+<div className="bg-[#1D4E89] font-['Archivo'] px-4 flex items-center justify-center overflow-y-auto py-8 pt-[15rem] md:pt-8 h-[100dvh]">
+<div className="bg-white rounded-2xl shadow-lg w-full max-w-4xl flex flex-col md:flex-row overflow-hidden">
         {/* Section logo à gauche */}
         <div className="md:w-1/2 w-full flex items-center justify-center bg-white p-8 border-r md:border-r border-b md:border-b-0">
             <img src={`${BASE}symbole_couleur.png`} alt="Logo" className="w-32" />
