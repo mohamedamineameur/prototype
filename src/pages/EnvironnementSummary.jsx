@@ -87,7 +87,7 @@ const PieSVG = ({ data, radius = 60 }) => {
   );
 };
 
-export default function Environnement() {
+export default function EnvironnementSummaryFull() {
   const buildings = [
     {
       name: "Siège Paris",

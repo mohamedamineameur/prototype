@@ -1,0 +1,258 @@
+[
+    {
+      "Titre": {
+        "fr": "Consommation d’énergie",
+        "en": "Energy Consumption"
+      },
+      "Question": {
+        "fr": "Votre organisation prend-elle des mesures pour gérer son utilisation de l'énergie (Électricité et carburants tels que l’essence, le gaz et autres) ?",
+        "en": "Is your organization taking steps to manage its energy use (Electricity and fuels such as gasoline, gas, and others)?"
+      },
+      "Réponses": [
+        {
+          "Texte": {
+            "fr": "Nous ne surveillons ni n'enregistrons actuellement notre utilisation de l'énergie.",
+            "en": "We do not currently monitor or record our energy use."
+          },
+          "Score": 0.2
+        },
+        {
+          "Texte": {
+            "fr": "Nous surveillons et enregistrons notre utilisation de l'énergie, y compris les énergies renouvelables.",
+            "en": "We monitor and record our energy use, including renewable energy."
+          },
+          "Score": 0.4
+        },
+        {
+          "Texte": {
+            "fr": "Nous avons des objectifs pour l'efficacité énergétique et/ou l'utilisation d'énergies renouvelables.",
+            "en": "We have targets for energy efficiency and/or the use of renewable energy."
+          },
+          "Score": 0.6
+        },
+        {
+          "Texte": {
+            "fr": "Nous avons amélioré notre efficacité énergétique et/ou notre utilisation d'énergies renouvelables par rapport à une année de référence.",
+            "en": "We have improved our energy efficiency and/or use of renewable energy compared to a baseline year."
+          },
+          "Score": 0.8
+        },
+        {
+          "Texte": {
+            "fr": "Nous visons à utiliser 100% d'énergies renouvelables, y compris nos véhicules et nos unités mobiles.",
+            "en": "We aim to use 100% renewable energy, including our vehicles and mobile units."
+          },
+          "Score": 1
+        },
+        {
+          "Texte": {
+            "fr": "Non applicable (ex : pas de local, pas de véhicules, aucun contrôle sur la consommation).",
+            "en": "Not applicable (e.g., no premises, no vehicles, no control over consumption)."
+          },
+          "Score": 0
+        }
+      ]
+    },
+    {
+      "Titre": {
+        "fr": "Utilisation et traitement de l'eau",
+        "en": "Water Use and Treatment"
+      },
+      "Question": {
+        "fr": "Votre organisation prend-elle des mesures pour gérer son utilisation de l'eau ?",
+        "en": "Is your organization taking steps to manage its water use?"
+      },
+      "Réponses": [
+        {
+          "Texte": {
+            "fr": "Nous ne surveillons ni n'enregistrons actuellement notre utilisation de l'eau.",
+            "en": "We do not currently monitor or record our water use."
+          },
+          "Score": 0.2
+        },
+        {
+          "Texte": {
+            "fr": "Nous surveillons et enregistrons notre utilisation de l'eau.",
+            "en": "We monitor and record our water use."
+          },
+          "Score": 0.4
+        },
+        {
+          "Texte": {
+            "fr": "Nous avons des objectifs pour améliorer l'efficacité d'utilisation de l'eau.",
+            "en": "We have targets to improve water use efficiency."
+          },
+          "Score": 0.6
+        },
+        {
+          "Texte": {
+            "fr": "Nous avons amélioré notre efficacité d'utilisation de l'eau par rapport à une année de référence.",
+            "en": "We have improved our water use efficiency compared to a baseline year."
+          },
+          "Score": 0.8
+        },
+        {
+          "Texte": {
+            "fr": "Nous avons une politique stricte de gestion de l’eau et visons à utiliser zéro eau nette provenant de zones de stress hydrique.",
+            "en": "We have a strict water management policy and aim to use zero net water from water-stressed areas."
+          },
+          "Score": 1
+        },
+        {
+          "Texte": {
+            "fr": "Non applicable. (Aucun usage de l’eau dans nos activités).",
+            "en": "Not applicable (No water usage in our activities)."
+          },
+          "Score": 0
+        }
+      ]
+    },
+    {
+      "Titre": {
+        "fr": "Gestion des déchets et circularité",
+        "en": "Waste Management and Circularity"
+      },
+      "Question": {
+        "fr": "Votre organisation prend-elle des mesures pour gérer ses déchets et promouvoir l'économie circulaire ?",
+        "en": "Is your organization taking steps to manage its waste and promote the circular economy?"
+      },
+      "Réponses": [
+        {
+          "Texte": {
+            "fr": "Nous ne surveillons ni n'enregistrons actuellement nos déchets, et n'avons pas d'initiatives pour les réduire ou les recycler.",
+            "en": "We do not currently monitor or record our waste, and have no initiatives to reduce or recycle it."
+          },
+          "Score": 0.2
+        },
+        {
+          "Texte": {
+            "fr": "Nous ne surveillons ni n'enregistrons actuellement nos déchets mais nous avons mis en place des initiatives de recyclage simples tel que le tri sélectif.",
+            "en": "We do not currently monitor or record our waste but have implemented simple recycling initiatives such as waste sorting."
+          },
+          "Score": 0.4
+        },
+        {
+          "Texte": {
+            "fr": "Nous avons des objectifs pour réduire nos déchets et concevoir ou utiliser des produits circulaires.",
+            "en": "We have targets to reduce our waste and design or use circular products."
+          },
+          "Score": 0.6
+        },
+        {
+          "Texte": {
+            "fr": "Nous avons des initiatives pour réduire nos déchets et promouvoir la circularité.",
+            "en": "We have initiatives to reduce our waste and promote circularity."
+          },
+          "Score": 0.8
+        },
+        {
+          "Texte": {
+            "fr": "Nous visons à atteindre zéro déchet et promouvoir une conception circulaire avancée.",
+            "en": "We aim to achieve zero waste and promote advanced circular design."
+          },
+          "Score": 1
+        },
+        {
+          "Texte": {
+            "fr": "Non applicable (par exemple, notre activité ne génère pas de déchets significatifs).",
+            "en": "Not applicable (e.g., our activity does not generate significant waste)."
+          },
+          "Score": 0
+        }
+      ]
+    },
+    {
+      "Titre": {
+        "fr": "Évaluation et réduction du bilan carbone (Inventaire des gaz à effet de serre)",
+        "en": "Carbon Footprint Assessment and Reduction (Greenhouse Gas Inventory)"
+      },
+      "Question": {
+        "fr": "Votre organisation prend-elle des mesures pour mesurer et/ou réduire son bilan carbone ?",
+        "en": "Is your organization taking steps to measure and/or reduce its carbon footprint?"
+      },
+      "Réponses": [
+        {
+          "Texte": {
+            "fr": "Nous n'avons actuellement aucune politique ou pratique pour mesurer ou réduire notre emprunte carbone.",
+            "en": "We do not currently have any policy or practice to measure or reduce our carbon footprint."
+          },
+          "Score": 0.2
+        },
+        {
+          "Texte": {
+            "fr": "Nous avons commencé à mesurer notre emprunte carbone, mais n'avons pas encore de plan pour les réduire.",
+            "en": "We have started measuring our carbon footprint, but do not yet have a plan to reduce it."
+          },
+          "Score": 0.4
+        },
+        {
+          "Texte": {
+            "fr": "Nous avons produit un bilan carbone, incluant les Scopes 1, 2 et 3 et nous avons commencé à mettre en œuvre des actions pour réduire notre emprunte.",
+            "en": "We have produced a carbon footprint, including Scopes 1, 2, and 3, and have begun implementing actions to reduce it."
+          },
+          "Score": 0.6
+        },
+        {
+          "Texte": {
+            "fr": "Nous avons produit un bilan carbone, incluant les Scopes 1, 2 et 3 et nous avons des objectifs spécifiques de réduction que nous suivons régulièrement.",
+            "en": "We have produced a carbon footprint, including Scopes 1, 2, and 3, and have specific reduction targets that we regularly monitor."
+          },
+          "Score": 0.8
+        },
+        {
+          "Texte": {
+            "fr": "Nous avons un objectif basé sur la science pour réduire notre emprunte carbone et avons déjà atteint des réductions significatives, avec des mesures et des évaluations régulières.",
+            "en": "We have a science-based target to reduce our carbon footprint and have already achieved significant reductions, with regular measurements and evaluations."
+          },
+          "Score": 1
+        }
+      ]
+    },
+    {
+      "Titre": {
+        "fr": "Analyse de cycle de vie des produits/services",
+        "en": "Product/Service Life Cycle Analysis"
+      },
+      "Question": {
+        "fr": "Votre entreprise prend-elle des mesures pour réduire l'empreinte écologique de ses produits ou services tout au long de leur cycle de vie ?",
+        "en": "Is your company taking steps to reduce the ecological footprint of its products or services throughout their life cycle?"
+      },
+      "Réponses": [
+        {
+          "Texte": {
+            "fr": "Nous n'avons actuellement aucune politique ou pratique pour mesurer ou réduire l'empreinte écologique de nos produits.",
+            "en": "We do not currently have any policy or practice to measure or reduce the ecological footprint of our products."
+          },
+          "Score": 0.2
+        },
+        {
+          "Texte": {
+            "fr": "Nous avons commencé à analyser l'empreinte écologique de nos produits/services, mais sans actions spécifiques en place.",
+            "en": "We have started analyzing the ecological footprint of our products/services, but have no specific actions in place."
+          },
+          "Score": 0.4
+        },
+        {
+          "Texte": {
+            "fr": "Nous avons des objectifs pour réduire l'empreinte écologique de nos produits/services et avons commencé à mettre en œuvre des mesures.",
+            "en": "We have targets to reduce the ecological footprint of our products/services and have started implementing measures."
+          },
+          "Score": 0.6
+        },
+        {
+          "Texte": {
+            "fr": "Nous avons mis en place des mesures pour réduire l'empreinte écologique de nos produits/services tout au long de leur cycle de vie.",
+            "en": "We have implemented measures to reduce the ecological footprint of our products/services throughout their life cycle."
+          },
+          "Score": 0.8
+        },
+        {
+          "Texte": {
+            "fr": "Nous avons intégré des pratiques de réduction de l'empreinte écologique dans la conception, la production et la fin de vie de nos produits/services, avec des résultats mesurables.",
+            "en": "We have integrated ecological footprint reduction practices into the design, production, and end of life of our products/services, with measurable results."
+          },
+          "Score": 1
+        }
+      ]
+    }
+  ]
