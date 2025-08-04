@@ -5,11 +5,22 @@
     <link rel="icon" type="image/svg+xml" href="/prototype/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
-    <script type="module" crossorigin src="/prototype/assets/index-2e8d5bac.js"></script>
-    <link rel="stylesheet" href="/prototype/assets/index-6a423a7c.css">
+    <script type="module" crossorigin src="/prototype/assets/index-41b6da08.js"></script>
+    <link rel="stylesheet" href="/prototype/assets/index-ac581663.css">
   <link rel="manifest" href="/prototype/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/prototype/registerSW.js"></script></head>
   <body>
     <div id="root"></div>
     
+    <script>
+  window.onerror = function (msg, url, lineNo, columnNo, error) {
+    document.body.innerHTML = `
+      <h1>Erreur JavaScript détectée</h1>
+      <p><strong>${msg}</strong> à ${lineNo}:${columnNo}</p>
+      <pre>${(error && error.stack) || 'Pas de stack'}</pre>
+    `;
+    return false;
+  };
+</script>
+
   </body>
 </html>
