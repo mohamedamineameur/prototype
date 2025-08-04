@@ -46,8 +46,8 @@ const Sidebar = ({ onClose }) => {
           <SidebarItem icon={<ChartColumnStacked size={18} />} label="ESG-Flash" to="/questionnaire" onClick={onClose} />
           <SidebarItem icon={<InspectionPanel size={18} />} label="Scores-ESG" to="/esg-scores"onClick={onClose} />
           <SidebarItem icon={<Grid2X2Plus size={18} />} label="ESG Plus" to="/esg-plus" onClick={onClose} />
-          
-          <SidebarItem icon={<Leaf size={18} />} label="Environnement" to="/environnement" onClick={() => setEnvOpen(!envOpen)} />
+
+          <SidebarItem icon={<Leaf size={18} />} label="Environnement" to="/environnement" onClick={onClose} />
 
           <SidebarItem icon={<Users size={18} />} label="Données sociales" to="/donnees-sociales" onClick={onClose} />
           <SidebarItem icon={<Landmark size={18} />} label="Gouvernance" to="/gouvernances" onClick={onClose} />

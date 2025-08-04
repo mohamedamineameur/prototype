@@ -9,5 +9,16 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+  window.onerror = function (msg, url, lineNo, columnNo, error) {
+    document.body.innerHTML = `
+      <h1>Erreur JavaScript détectée</h1>
+      <p><strong>${msg}</strong> à ${lineNo}:${columnNo}</p>
+      <pre>${(error && error.stack) || 'Pas de stack'}</pre>
+    `;
+    return false;
+  };
+</script>
+
   </body>
 </html>
