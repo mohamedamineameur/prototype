@@ -52,6 +52,12 @@ import BuildingWaterConsumptionForm from "./pages/BuildingWaterConsumptionForm";
 import BuildingWasteForm from "./pages/BuildingWasteForm";
 import EnvironnementSummary from "./pages/EnvironnementSummary";
 import StepperForm from "./pages/StepperForm";
+import ESGplus from "./pages/ESGPlus";
+import AccountManagement from "./pages/AccountManagement";
+import SidebarAdminMobile from "./components/SidebarAdminMobile";
+import RecommendationPage from "./pages/RecommendationPage";
+import PageEnConstruction from "./pages/PageEnConstruction";
+
 const base = import.meta.env.BASE_URL;
 
 function LayoutMobile() {
@@ -68,6 +74,7 @@ function LayoutMobile() {
   ];
 
   const hideSidebar = noSidebarRoutes.includes(location.pathname);
+  const isAdminRoute = location.pathname.startsWith("/admin");
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "auto";
@@ -83,7 +90,11 @@ function LayoutMobile() {
               menuOpen ? "translate-x-0" : "-translate-x-full"
             }`}
           >
-            <Sidebar onClose={() => setMenuOpen(false)} />
+            {isAdminRoute ? (
+              <SidebarAdminMobile onClose={() => setMenuOpen(false)} />
+            ) : (
+              <Sidebar onClose={() => setMenuOpen(false)} />
+            )}
           </div>
 
           {menuOpen && (
@@ -159,6 +170,21 @@ function LayoutMobile() {
           <Route path="/s" element={<BuildingWasteForm />} />       
           <Route path="/t" element={<EnvironnementSummary />} />
           <Route path="/stepper-form" element={<StepperForm />} />
+          <Route path="/esg-plus" element={<ESGplus />} />
+          <Route path="/admin/account-management" element={<AccountManagement />} />
+          
+          {/* Admin routes */}
+          <Route path="/admin/account-management/account-with-users" element={<AccountWithUsers />} />
+          <Route path="/recommandations-ia" element={<RecommendationPage />} />
+          <Route path="/admin/page-en-construction1" element={<PageEnConstruction />} />
+          <Route path="/admin/page-en-construction2" element={<PageEnConstruction />} />
+          <Route path="/admin/page-en-construction3" element={<PageEnConstruction />} />
+          <Route path="/admin/page-en-construction4" element={<PageEnConstruction />} />
+          <Route path="/admin/page-en-construction5" element={<PageEnConstruction />} />    
+          <Route path="/admin/page-en-construction6" element={<PageEnConstruction />} />
+          <Route path="/admin/page-en-construction7" element={<PageEnConstruction />} />
+          
+          
           {/* Add more routes as needed */}
         </Routes>
       </div>

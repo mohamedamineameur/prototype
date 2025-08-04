@@ -1,31 +1,23 @@
 import { NavLink } from "react-router-dom";
 import {
-  Home,
-  FileText,
-
   Users,
-  Landmark,
-  LayoutDashboard,
- 
-  HelpCircle,
-  Settings,
+  FileText,
   BookOpen,
   LogOut,
-  ChartColumnStacked,
+  Layers3,
+  Settings,
+  Building2,
+  Fuel,
+  Flashlight,
+  CircleHelp,
+  BadgeCheck,
   X,
-  Play,
-  Leaf,
-  InspectionPanel,
-  Grid2X2Plus,
-  Bot
 } from "lucide-react";
 import { useState } from "react";
 
 const BASE = import.meta.env.BASE_URL;
 
-const Sidebar = ({ onClose }) => {
-  const [envOpen, setEnvOpen] = useState(false);
-
+const SidebarAdminMobile = ({ onClose }) => {
   return (
     <div className="bg-[#1D4E89] text-white w-64 h-screen font-['Archivo'] overflow-y-auto pb-12 relative">
       {/* Bouton de fermeture */}
@@ -39,27 +31,21 @@ const Sidebar = ({ onClose }) => {
       <div className="flex flex-col justify-between min-h-full">
         {/* Navigation principale */}
         <nav className="flex flex-col mt-12 gap-2 px-4">
-          <SidebarItem icon={<Home size={18} />} label="Accueil" to="/" onClick={onClose} />
-          <SidebarItem icon={<Play size={18} />} label="Initialisateur" to="/stepper-form" onClick={onClose} />
-          <SidebarItem icon={<LayoutDashboard size={18} />} label="Tableaux de bord" to="/dashboard" onClick={onClose} />
-          <SidebarItem icon={<FileText size={18} />} label="Rapports ESG" to="/rapports" onClick={onClose} />
-          <SidebarItem icon={<ChartColumnStacked size={18} />} label="ESG-Flash" to="/questionnaire" onClick={onClose} />
-          <SidebarItem icon={<InspectionPanel size={18} />} label="Scores-ESG" to="/esg-scores"onClick={onClose} />
-          <SidebarItem icon={<Grid2X2Plus size={18} />} label="ESG Plus" to="/esg-plus" onClick={onClose} />
-          
-          <SidebarItem icon={<Leaf size={18} />} label="Environnement" to="/environnement" onClick={() => setEnvOpen(!envOpen)} />
-
-          <SidebarItem icon={<Users size={18} />} label="Données sociales" to="/donnees-sociales" onClick={onClose} />
-          <SidebarItem icon={<Landmark size={18} />} label="Gouvernance" to="/gouvernances" onClick={onClose} />
-          <SidebarItem icon={<Bot size={18} />} label="Recommandations IA" to="/recommandations-ia" onClick={onClose} />
+          <SidebarItem icon={<Users size={18} />} label="Comptes" to="admin/account-management" onClick={onClose}/>
+          <SidebarItem icon={<FileText size={18} />} label="Types de documents" to="admin/page-en-construction1" onClick={onClose} />
+          <SidebarItem icon={<Fuel size={18} />} label="Facteurs carburant" to="admin/page-en-construction2" onClick={onClose} />
+          <SidebarItem icon={<Flashlight size={18} />} label="Facteurs électricité" to="admin/page-en-construction3" onClick={onClose} />
+          <SidebarItem icon={<Building2 size={18} />} label="Secteurs NAICS" to="admin/page-en-construction4" onClick={onClose} />
+          <SidebarItem icon={<BadgeCheck size={18} />} label="Back Office" to="admin/page-en-construction5" onClick={onClose} />
+          <SidebarItem icon={<Layers3 size={18} />} label="Prompts" to="admin/page-en-construction6" onClick={onClose} />
+          <SidebarItem icon={<BookOpen size={18} />} label="Questions environnement" to="admin/page-en-construction7" onClick={onClose} />
         </nav>
 
         {/* Bas de menu */}
         <div className="px-4 pb-12 border-t border-white/20 mt-6">
           <div className="flex flex-col gap-2 text-sm mt-4">
-            <SidebarItem icon={<HelpCircle size={16} />} label="Aide" to="/aide" small onClick={onClose} />
+            <SidebarItem icon={<CircleHelp size={16} />} label="Aide" to="/aide" small onClick={onClose} />
             <SidebarItem icon={<Settings size={16} />} label="Paramètres" to="/settings" small onClick={onClose} />
-            <SidebarItem icon={<BookOpen size={16} />} label="Documentation" to="/documentation" small onClick={onClose} />
           </div>
 
           <div className="mt-6 text-sm mb-3">
@@ -102,4 +88,4 @@ const SidebarItem = ({ icon, label, to, small, onClick }) => {
   );
 };
 
-export default Sidebar;
+export default SidebarAdminMobile;

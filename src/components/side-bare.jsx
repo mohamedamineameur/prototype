@@ -16,7 +16,9 @@ import {
   ChartColumnStacked,
   Play,
   Leaf,
-  InspectionPanel
+  InspectionPanel,
+  Grid2X2Plus,
+  Bot
 } from "lucide-react";
 import { useState } from "react";
 
@@ -36,13 +38,17 @@ const Sidebar = () => {
                     <SidebarItem icon={<Play size={18} />} label="Initialisateur" to="/stepper-form" />
                     <SidebarItem icon={<LayoutDashboard size={18} />} label="Tableaux de bord" to="/dashboard" />
                     <SidebarItem icon={<FileText size={18} />} label="Rapports ESG" to="/rapports" />
-                    <SidebarItem icon={<ChartColumnStacked size={18} />} label="ESG-Flash" to="/questionnaire" />
-                    <SidebarItem icon={<Leaf size={18} />} label="Environnement" to="/environnement" onClick={() => setEnvOpen(!envOpen)} />
                     <SidebarItem icon={<InspectionPanel size={18} />} label="Scores-ESG" to="/esg-scores" />
-                   
+                    <SidebarItem icon={<ChartColumnStacked size={18} />} label="ESG-Flash" to="/questionnaire" />
+                    <SidebarItem icon={<Grid2X2Plus size={18} />} label="ESG Plus" to="/esg-plus"  />
+                    <SidebarItem icon={<Leaf size={18} />} label="Environnement" to="/environnement" />
+
+
         
                     <SidebarItem icon={<Users size={18} />} label="Données sociales" to="/donnees-sociales" />
                     <SidebarItem icon={<Landmark size={18} />} label="Gouvernance" to="/gouvernances" />
+                              <SidebarItem icon={<Bot size={18} />} label="Recommandations IA" to="/recommandations-ia" />
+
                   </nav>
                 </div>
         
